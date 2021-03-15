@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:practice/models/user.dart';
+import 'package:day12_login/models/user.dart';
 
 class ListUsers extends StatefulWidget {
   ListUsers({Key key}) : super(key: key);

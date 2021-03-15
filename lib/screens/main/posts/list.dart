@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:practice/models/post.dart';
+import 'package:day12_login/models/post.dart';
 
 class ListPosts extends StatefulWidget {
   ListPosts({Key key}) : super(key: key);

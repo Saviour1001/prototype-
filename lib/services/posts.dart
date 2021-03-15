@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:practice/models/post.dart';
+import 'package:day12_login/models/post.dart';
 
 class PostService {
   List<PostModel> _postListFromSnapshot(QuerySnapshot snapshot) {

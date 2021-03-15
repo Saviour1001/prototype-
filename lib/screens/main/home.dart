@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:practice/screens/home/feed.dart';
-import 'package:practice/screens/home/search.dart';
-import 'package:practice/services/auth.dart';
+import 'package:day12_login/screens/home/feed.dart';
+import 'package:day12_login/screens/home/search.dart';
+import 'package:day12_login/services/auth.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
