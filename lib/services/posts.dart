@@ -15,7 +15,8 @@ class PostService {
     }).toList();
   }
 
-  Future savePost(orgName, orgContact, jobType, jobDescription) async {
+  Future savePost(orgName, orgContact, jobType, jobDescription, State, Address,
+      OrgEmail) async {
     await FirebaseFirestore.instance.collection("Posts").add({
       'Organization Name': orgName,
       'Organization Contact': orgContact,
@@ -23,6 +24,9 @@ class PostService {
       'Job Type': jobType,
       'Posted On': FieldValue.serverTimestamp(),
       'Apply by': FieldValue.serverTimestamp(),
+      'State': State,
+      'Address': Address,
+      'OrgEmail': OrgEmail,
       'User_id': FirebaseAuth.instance.currentUser.uid,
     });
   }
