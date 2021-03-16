@@ -13,6 +13,9 @@ class _AddState extends State<Add> {
   String orgContact = '';
   String jobType = '';
   String jobDescription = '';
+  String State = '';
+  String Address = '';
+  String OrgEmail = '';
 
   final PostService _postService = PostService();
   @override
@@ -26,8 +29,8 @@ class _AddState extends State<Add> {
             FlatButton(
                 textColor: Colors.white,
                 onPressed: () async {
-                  _postService.savePost(
-                      orgName, orgContact, jobType, jobDescription);
+                  _postService.savePost(orgName, orgContact, jobType,
+                      jobDescription, State, Address, OrgEmail);
                   Navigator.pop(context);
                 },
                 child: Text("Post your Job!!"))
@@ -35,7 +38,7 @@ class _AddState extends State<Add> {
         ),
         body: SingleChildScrollView(
             child: Column(
-          children: [
+          children: <Widget>[
             Container(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
               child: new Form(
@@ -73,7 +76,7 @@ class _AddState extends State<Add> {
                 child: TextFormField(
                   onChanged: (val) {
                     setState(() {
-                      orgContact = val;
+                      State = val;
                     });
                   },
                   cursorColor: Colors.black,
@@ -104,7 +107,7 @@ class _AddState extends State<Add> {
                 child: TextFormField(
                   onChanged: (val) {
                     setState(() {
-                      jobType = val;
+                      orgContact = val;
                     });
                   },
                   cursorColor: Colors.black,
@@ -166,7 +169,7 @@ class _AddState extends State<Add> {
                 child: TextFormField(
                   onChanged: (val) {
                     setState(() {
-                      jobDescription = val;
+                      Address = val;
                     });
                   },
                   cursorColor: Colors.black,
@@ -197,7 +200,7 @@ class _AddState extends State<Add> {
                 child: TextFormField(
                   onChanged: (val) {
                     setState(() {
-                      jobDescription = val;
+                      OrgEmail = val;
                     });
                   },
                   cursorColor: Colors.black,

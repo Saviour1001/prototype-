@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:day12_login/screens/auth/signup.dart';
-import 'package:day12_login/Screens/Signup/signup_screen.dart';
-import 'package:day12_login/Screens/Welcome/components/background.dart';
+import 'package:day12_login/screens/auth/signin.dart';
 import 'package:day12_login/components/rounded_button.dart';
 import 'package:day12_login/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:day12_login/screens/auth/signup.dart';
+import 'package:day12_login/screens/Welcome/components/background.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -29,14 +29,8 @@ class Body extends StatelessWidget {
             RoundedButton(
               text: "LOGIN",
               press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUp();
-                    },
-                  ),
-                );
+                Navigator.push(context,
+                    new MaterialPageRoute(builder: (context) => new SignUp()));
               },
             ),
             RoundedButton(
@@ -45,13 +39,9 @@ class Body extends StatelessWidget {
               textColor: Colors.black,
               press: () {
                 Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return SignUpScreen();
-                    },
-                  ),
-                );
+                    context,
+                    new MaterialPageRoute(
+                        builder: (context) => new SignUpScreen()));
               },
             ),
           ],

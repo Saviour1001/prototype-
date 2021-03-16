@@ -15,25 +15,29 @@ class _SearchState extends State<Search> {
   String search = '';
   @override
   Widget build(BuildContext context) {
-    return StreamProvider.value(
-      value: _userService.queryByName(search),
-      initialData: [],
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(10),
-            child: TextField(
-              onChanged: (text) {
-                setState(() {
-                  search = text;
-                });
-              },
-              decoration: InputDecoration(hintText: 'Search...'),
-            ),
+    return SingleChildScrollView(
+        child: Column(children: [
+      Container(
+        child: StreamProvider.value(
+          value: _userService.queryByName(search),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  onChanged: (text) {
+                    setState(() {
+                      search = text;
+                    });
+                  },
+                  decoration: InputDecoration(hintText: 'Search...'),
+                ),
+              ),
+              ListUsers()
+            ],
           ),
-          ListUsers()
-        ],
-      ),
-    );
+        ),
+      )
+    ]));
   }
 }

@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:day12_login/models/post.dart';
 import 'package:day12_login/models/user.dart';
 
 import 'package:day12_login/services/utils.dart';
@@ -41,6 +42,14 @@ class UserService {
         .snapshots()
         .map(_userFromFirebaseSnapshot);
   }
+
+  // Stream<PostModel> getPosts() {
+  //   return FirebaseFirestore.instance
+  //       .collection("Posts")
+  //       .doc()
+  //       .snapshots()
+  //       .map(_postFromFirebaseSnapshot);
+  // }
 
   Stream<List<UserModel>> queryByName(search) {
     return FirebaseFirestore.instance
