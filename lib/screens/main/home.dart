@@ -37,9 +37,10 @@ class _HomeState extends State<Home> {
         child: ListView(
           children: <Widget>[
             DrawerHeader(
-              child: Text('Slide in aha '),
-              decoration: BoxDecoration(color: Colors.blue),
-            ),
+                child: Image.asset(
+              'assets/home_images/pic1.png',
+              fit: BoxFit.cover,
+            )),
             ListTile(
               title: Text('Profile'),
               onTap: () {
