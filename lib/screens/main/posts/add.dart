@@ -22,7 +22,7 @@ class _AddState extends State<Add> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Scaffold(
-          resizeToAvoidBottomInset: false,
+          resizeToAvoidBottomInset: true,
           appBar: AppBar(
             title: Text("Post here"),
             actions: <Widget>[
@@ -38,7 +38,6 @@ class _AddState extends State<Add> {
             ],
           ),
           body: SingleChildScrollView(
-              child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
                 Container(
@@ -244,7 +243,7 @@ class _AddState extends State<Add> {
               ],
               //],
             ),
-          ))),
+          )),
     );
   }
 }
